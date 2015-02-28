@@ -15,5 +15,6 @@ public class Main {
         System.out.println(stringCalculator.add(""));
         System.out.println(stringCalculator.add("3"));
         System.out.println(stringCalculator.add("3,3"));
+        System.out.println(stringCalculator.add("5,2,3,10"));
     }
 }

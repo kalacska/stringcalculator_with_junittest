@@ -12,11 +12,12 @@ package com.mycompany.stringcalculator;
 
 public class StringCalculator {
     
-    int visszaAdottErtek,elsoSzam,masodikSzam=0;
-    String numbersStringArray[]=new String[2];
+    String numbersStringArray[];
     String elValasztoKarakter=",";
     
     public int add(String numbers){
+        
+        int visszaAdottErtek=0;
         
         if(numbers.isEmpty()){
             visszaAdottErtek=0;
@@ -24,11 +25,8 @@ public class StringCalculator {
         else{
             numbersStringArray=numbers.split(elValasztoKarakter);
             
-            if(numbersStringArray.length==1){
-                visszaAdottErtek=Integer.valueOf(numbersStringArray[0]);
-            }
-            else{
-                visszaAdottErtek=(Integer.valueOf(numbersStringArray[0]))+(Integer.valueOf(numbersStringArray[1]));
+            for (String szovegesSzam : numbersStringArray) {
+                visszaAdottErtek+=Integer.valueOf(szovegesSzam);
             }
         }
         
