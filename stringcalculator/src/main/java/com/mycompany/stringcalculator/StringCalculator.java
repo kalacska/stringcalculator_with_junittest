@@ -13,9 +13,9 @@ package com.mycompany.stringcalculator;
 public class StringCalculator {
     
     String numbersStringArray[];
-    String elValasztoKarakter=",";
+    String alapertelmezett_elValasztoKarakter=",";
     
-    public int add(String numbers){
+    public int add(String numbers, String elvalasztoKarakter){
         
         int visszaAdottErtek=0;
         
@@ -23,13 +23,17 @@ public class StringCalculator {
             visszaAdottErtek=0;
         }
         else{
-            numbersStringArray=numbers.split(elValasztoKarakter);
+            numbersStringArray=numbers.split(elvalasztoKarakter);
             
             for (String szovegesSzam : numbersStringArray) {
                 visszaAdottErtek+=Integer.valueOf(szovegesSzam);
             }
         }
-        
+ 
         return visszaAdottErtek;
+    }
+    
+    public int add(String numbers){
+        return this.add(numbers, alapertelmezett_elValasztoKarakter);
     }
 }
