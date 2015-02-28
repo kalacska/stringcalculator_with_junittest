@@ -9,6 +9,15 @@ package com.mycompany.stringcalculator;
  *
  * @author Patrik
  */
+
 public class StringCalculator {
     
+    int visszaAdottErtek;
+    
+    public int add(String numbers){
+        if(numbers.isEmpty())
+            visszaAdottErtek=0;
+        
+        return visszaAdottErtek;
+    }
 }
