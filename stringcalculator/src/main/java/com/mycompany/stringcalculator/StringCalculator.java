@@ -12,11 +12,16 @@ package com.mycompany.stringcalculator;
 
 public class StringCalculator {
     
-    int visszaAdottErtek;
+    int visszaAdottErtek=0;
     
     public int add(String numbers){
-        if(numbers.isEmpty())
+        if(numbers.isEmpty()){
             visszaAdottErtek=0;
+        }
+        else{
+            visszaAdottErtek=Integer.valueOf(numbers);
+        }
+        
         
         return visszaAdottErtek;
     }
